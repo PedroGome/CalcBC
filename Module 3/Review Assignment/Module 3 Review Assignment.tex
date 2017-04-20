@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[american]{babel}
+\usepackage{lipsum}
+
+
+\usepackage[letterpaper,left=3cm,right=2cm,top=2.5cm,bottom=1.5cm]{geometry}
+\onehalfspacing
+
+\author{Pedro G\'{o}mez Mart\'{i}n}
+\date{\today}
+\title{Module 3 Review Assignment}
+
+\begin{document}
+\maketitle
+\section{}
+	\begin{align*}
+		a_n=&\frac{\left(1+n\right)!}{n!}\\
+		a_n=&\frac{\left(n+1\right)\left(n\right)\left(n-1\right)\cdots}{\left(n\right)\left(n-1\right)\cdots}\\
+		a_n=&n+1\\
+		&\lim\limits_{\infty}{\left[n+1\right]}=\infty\\
+	\end{align*}
+	
+\section{}
+	\begin{align*}
+		\sum\limits_{n=0}^{\infty}&{\frac{\left(-2\right)^{n+3}}{5^{n+2}}}\\
+		\sum\limits_{n=0}^{\infty}&{\frac{\left(-2\right)^{n}\left(-2\right)^3}{5^n{\left(5\right)^2}}}\\
+		\frac{\left(-2\right)^3}{\left(5\right)^2}\sum\limits_{n=0}^{\infty}&\left(\frac{-2}{5}\right)^n\\
+		-\frac{8}{25}\sum\limits_{n=0}^{\infty}&\left(-1\right)^n\left(\frac{2}{5}\right)^n\\
+		-\frac{8}{25}\cdot\frac{5}{7}&=\fbox{$-\frac{40}{175}$}
+	\end{align*}
+	
+\section{}
+	\begin{align*}
+		\sum\limits_{n=1}^{\infty}\frac{1}{n\left(n+2\right)} \rightarrow \frac{A}{n}+\frac{B}{n+2}=\frac{1}{n(n+2)} \rightarrow A(n+2)+Bn=1\ \Rightarrow\ A=\frac{1}{2}\ B=-\frac{1}{2}\\
+		\frac{1}{2}\lim\limits_{N\rightarrow \infty}\left[\sum\limits_{n=0}^{N}\left(\frac{1}{n+2}-\frac{1}{n}\right) \right]=\frac{1}{2}\left(1+\frac{1}{2}+\lim\limits_{N\rightarrow \infty}\left[\frac{1}{N+2}\right]\right)=\frac{3}{4}
+	\end{align*}
+	
+\section{}
+	\begin{align*}
+		\sum\limits_{n=1}^{\infty}\frac{(-1)^{n+1}(n+2\cdot 3^n)}{2^{2n+1}}=\sum\limits_{n=1}^{\infty}{\frac{(-1)^{n}(-1)(n+2)\cdot 3^n}{2^{2n}\cdot 2}}=\frac{1}{2} \sum\limits_{n=1}^{\infty}(-1)^n\frac{(n+2)\cdot 3^n}{2^{2n}}\\
+		\lim\limits_{n\rightarrow \infty}\frac{(n+2\cdot 3^{n})}{2^{2n}}=0
+	\end{align*}
+	\begin{multicols}{2}
+		\begin{align*}
+			\frac{(1+2)3}{2^2}\ \frac{(2+2)3^2}{2^4}
+		\end{align*}
+		\begin{align*}
+			\frac{9}{4}&\ \frac{\not 4 \cdot 9}{\not 4 \cdot 4}&\ \frac{(3+2)3^3}{2^6}=\frac{5\cdot 27}{64}=\frac{135}{64}& \\
+			b_1&\ b_2&\ b_3&
+		\end{align*}
+		\vfill
+		\columnbreak
+		\begin{align*}
+			a_n&=\frac{\left(-1\right)^{n+1}\left(n+2\right)3^n}{2^{2n}}\\
+			b_n&=\frac{\left(n+2\right)3^n}{2^{2n}}
+		\end{align*}
+		$a_1$ cancels $a_2$ and from $a_3$ on, $b_n$ converges.
+	\end{multicols}
+	
+\end{document}

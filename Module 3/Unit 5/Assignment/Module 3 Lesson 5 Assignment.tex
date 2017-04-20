@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[american]{babel}
+\usepackage{enumerate}
+
+
+\usepackage[letterpaper,left=3cm,right=2cm,top=2.5cm,bottom=1.5cm]{geometry}
+\onehalfspacing
+
+\author{Pedro G\'{o}mez Mart\'{i}n}
+\date{\today}
+\title{Module 3 Lesson 5 Assignment}
+
+\begin{document}
+\maketitle
+\section{}
+	$\left.a\right)$  Write the first four non-zero terms of the power series of $f(x)$ centered at zero, in terms of $a$. 
+		\begin{align*}
+			f^{0}(x)&=\left(-1\right)^{0}a^{0}f\left(x\right)\\
+			f^{'}(x)&=\left(-1\right)^{1}a^{1}f\left(x\right)\\
+			f^{''}(x)&=\left(-1\right)^{2}a^{2}f^{'}\left(x\right)\\
+			f^{'''}(x)&=\left(-1\right)^{3}a^{3}f^{''}\left(x\right)\\
+			f^{4}(x)&=\left(-1\right)^{4}a^{4}f^{'''}\left(x\right)
+		\end{align*}
+		\begin{equation*}
+			f(x)=1-ax+\frac{\left(ax\right)^2}{2!}-\frac{\left(ax\right)^{3}}{3!}+\cdots+\left(-1\right)^{n}\cdot\frac{\left(ax\right)^{n}}{n!}
+		\end{equation*}
+	$\left.b\right)$  Write $f(x)$ as a familiar function in terms of a.
+		\begin{align*}
+			f(x)=e^{-ax}
+		\end{align*}
+	$\left.c\right)$ How many terms of the power series are necessary to approximate $f(0.2)$ with an error less than
+		$0.001$ with $a = 2$? Justify your answer.
+		\begin{align*}
+				f(x)=1-2x+\frac{\left(2x\right)^2}{2!}-\frac{\left(2x\right)^{3}}{3!}+\frac{\left(2x\right)^{4}}{4!}-\frac{\left(2x\right)^{5}}{5!}\\
+				\frac{8\cdot(.2)^3}{6}\approx .01067\;\ \;\ \;\ \;\ \;\ 	 \frac{16\cdot(.2)^4}{24}\approx .001067\;\ \;\ \;\ \;\ \;\ 	 \frac{48\cdot (.2)^5}{120}\approx .00008
+		\end{align*}
+		It takes five terms to approximate $f\left(0.2\right)$ with an error less than $0.001$ when $a = 2$
+\section{}
+	$\left.a\right)$ 
+	\begin{align*}
+		\frac{d}{dx}\left[\tan (x)\right]&=\sec^{2}(x)\\
+		\tan (x)\approx x+\frac{x^3}{3}+\frac{2x^5}{15} &\rightarrow \sec (x)\approx 1+x^2+\frac{2}{3}x^4
+	\end{align*}
+	$\left.b\right)$
+	\begin{align*}
+		\frac{x+\frac{1}{3}x^3+\frac{2}{15}x^5}{x} \rightarrow \frac{x}{x}+\frac{1}{3}\cdot\frac{x^3}{x}+\frac{2}{15}\cdot\frac{x^5}{x} \rightarrow 1+\frac{x^2}{3}+\frac{2x^4}{15}
+	\end{align*}
+	$\left.c\right)$
+	\begin{align*}
+		1+\frac{0^2}{3}+\frac{2\cdot 0^4}{15} = 1
+	\end{align*}
+	$\left.d\right)$
+	The limit found in part c is exact since all the terms that come after the one contain an $x$ multipliying the entire numerator and every $x$ is substituted by a zero, thus it will be practically equivalent to $1+\sum\limits_{n=1}^{\infty}{0x^n}$
+	
+\end{document}

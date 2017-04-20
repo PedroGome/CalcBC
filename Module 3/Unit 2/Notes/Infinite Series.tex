@@ -1,0 +1,124 @@
+\documentclass[a4paper]{article}
+
+\usepackage{mathtools}
+\usepackage{multicol}
+%opening
+\title{Module 3 Lesson 3 Notes}
+\author{Pedro G\'{o}mez Mart\'{i}n}
+
+\begin{document}
+\maketitle
+
+\section{P-Series}
+	$\frac{1}{n^{p}}$ $p$ determines convergence, if $p>1$ the series will converge
+
+\section{Nth Term Test}
+	if $\sum\limits_{n=1}^{\infty}{a_n}$ and $\lim\limits_{n\rightarrow \infty}\left[{a_n}\right] \not= 0$ the series diverges, note that this test only proves that it diverges when it does not equal to 0, when it equals to 0 it does not prove anything.
+
+\section{The Integral Test}
+	If $\sum\limits_{n=1}^{\infty}{a_n}$ where $a_n = f\left(n\right)$ for $f$ is continious, decreasing and $f\left(n\right)\geq 0$\\ Then:
+	\begin{equation*}
+	\sum\limits_{n=1}^{\infty}{a_n} \ \text {and} \ \int\limits_{1}^{\infty}{f\left(n\right)}\ dn
+	\end{equation*}
+	Either both converge or both diverge
+
+\section{Direct Comparison Test}
+	\begin{align*}
+	&\sum\limits_{n=1}^{\infty}{\frac{1}{n^{2}+1}} &\frac{1}{n^{2}+1}<\frac{1}{n^2}\ &\text{Therefore\ it\ converges}\\
+	&\sum\limits_{n=1}^{\infty}{\frac{1}{n-3}} &\frac{1}{n-3}>\frac{1}{n}\ &\text{Therefore it diverges}\\
+	&\sum\limits_{n=1}^{\infty}{\frac{1}{\sqrt{n-11}}} &\frac{1}{\sqrt{n-11}}>\frac{1}{\sqrt{n}}\ &\text{Therefore it diverges}\\
+	&\sum\limits_{n=1}^{\infty}{\left(\frac{4}{5+n}\right)^n} &\left(\frac{4}{5+n}\right)^n<\left(\frac{4}{5}\right)^n\ &\text{Therefore it converges}\\
+	&\sum\limits_{n=1}^{\infty}{\frac{n^2}{n^5-4}} &\dfrac{1}{n^{3}-\frac{4}{n^2}}>\frac{1}{n^3}\ &\text{Needs another test}\\
+	&\sum\limits_{n=1}^{\infty}{\frac{n}{n^2+2}} &\dfrac{1}{n+\frac{2}{n}}<\frac{1}{n}\ &\text{Needs another test}
+	\end{align*}
+
+\section{Limit Comparison Test}
+	Given $\sum\limits_{n=1}^{\infty}{a_n}$ and $\sum\limits_{n=1}^{\infty}{b_n}$ where $a_{n}>0$ and $b_{n}>0$
+	\\
+	\begin{multicols}{2}
+		\begin{equation*}
+		\lim\limits_{n\rightarrow\infty}\left[\frac{a_n}{b_n}\right]=L
+		\end{equation*}
+		\columnbreak
+		\begin{itemize}
+		\item If $L>0$ and finite, either both converge or both diverge
+		\item If $b_n$ converges and $L=0$ both converge
+		\item If $b_n$ diverges and $L=\infty$ both diverge
+		\end{itemize}
+	\end{multicols}
+	\begin{flalign*}
+	\text{Example:}\ \ \ &\sum\limits_{n=1}^{\infty}{\frac{n^2}{n^5-4}}\ \ \ \sum\limits_{n=1}^{\infty}{\frac{1}{n^3}}\\
+	&\lim\limits_{n\rightarrow\infty}\left[\frac{n^2}{n^5-4}:\frac{1}{n^3}\right]=\lim\limits_{n\rightarrow\infty}{\frac{n^5}{n^5-4}}=1\\
+	\text{Example:}\ \ \ &\sum\limits_{n=1}^{\infty}{\frac{2n}{n^2+2}}\ \ \ \sum\limits_{n=1}^{\infty}{\frac{1}{n}}\\
+	&\lim\limits_{n\rightarrow\infty}\left[\frac{2n}{n^2+2}:\frac{1}{n}\right]=\lim\limits_{n\rightarrow\infty}{\frac{2n^2}{n^2+2}}=2
+	\end{flalign*}
+\section{Alternating Series Test}
+	$a_{n}>0$ then\\
+	$\sum\limits_{n=1}^{\infty}{\left(-1\right)^{n}a_n}$ and $\sum\limits_{n=1}^{\infty}{\left(-1\right)^{n+1}a_n}$\\
+	converge if:\\
+	{\setlength{\abovedisplayskip}{0pt}
+	\begin{align*}
+	 1.\ &\lim\limits_{n\rightarrow\infty}{a_n}=0\ &\Rightarrow \text{nth term test}\\
+	 2.\ &a_{n+1}<a_n\ \text{for all $n$}\ &\Rightarrow \text{The terms decrease}
+	\end{align*}
+	}
+
+\section{Alternating Series Estimation Theorem}
+	\begin{align*}
+	\text{If}\ &\sum\limits_{n=1}^{\infty}{\left|a_{n}\right|}\ \text{converges, then}\ \sum\limits_{n=1}^{\infty}{a_n}\ \text{also converges}\\
+	&\sum\limits_{n=1}^{\infty}{a_n}\ \text{is \underline{absolutely convergent} if}\ \sum\limits_{n=1}^{\infty}{\left|a_{n}\right|}\ \text{also converges}\\
+	&\sum\limits_{n=1}^{\infty}{a_n}\ \text{is \underline{conditionally convergent} if}\ \sum\limits_{n=1}^{\infty}{\left|a_{n}\right|}\ \text{diverges}
+	\end{align*}
+	example:\\
+	{\setlength{\abovedisplayskip}{0pt}
+		\begin{align*}
+		 \sum\limits_{n=1}^{\infty}{\left(-1\right)^{n}\frac{1}{n}}\ \text{meets the alternating series test but}\ \sum\limits_{n=1}^{\infty}{\left|-1\right|^{n}\frac{1}{n}}\Rightarrow\sum\limits_{n=1}^{\infty}{\frac{1}{n}}\ \text{diverges}
+		\end{align*}
+		}
+
+\pagebreak
+\section{Ratio Test}
+	{\setlength{\abovedisplayskip}{0pt}
+	\begin{flalign*}
+	&\lim\limits_{n\rightarrow\infty}{\left[\frac{a_{n+1}}{a_n}\right]}\\
+	&
+	\end{flalign*}
+	}{
+	\setlength{\columnseprule}{.3pt}
+	\begin{multicols}{2}
+		{\centering \textbf{Converges}
+		\begin{align*}
+		&\sum\limits_{n=1}^{\infty}{\frac{2}{n^2+1}}\ \ \ \lim\limits_{n\rightarrow\infty}{\left[\frac{a_{n+1}}{a_n}\right]}\\
+		&\lim\limits_{n\rightarrow\infty}{\left[\frac{2}{(n+1)^2+1}\cdot\frac{n^2+1}{2}\right]}\\
+		&\lim\limits_{n\rightarrow\infty}{\left[\frac{n^2+1}{(n+1)^2+1}\right]}\\
+		&\lim\limits_{n\rightarrow\infty}{\left[\frac{n^2+1}{n^2+2n+2}\right]}=1
+		\end{align*}
+		}
+	\vfill\null
+	\columnbreak
+		{
+		\centering \textbf{Diverges}
+		\begin{align*}
+		&\sum\limits_{n=1}^{\infty}{\frac{1}{n}\left(\frac{3}{2}\right)^{n}}\ \ \ \lim\limits_{n\rightarrow\infty}{\left[\frac{a_{n+1}}{a_n}\right]}\\
+		&\lim\limits_{n\rightarrow\infty}{\left[\frac{3^{n+1}}{\left(n+1\right)2^{n+1}}\cdot\frac{2^n n}{3^n}\right]}\\
+		&\lim\limits_{n\rightarrow\infty}{\left[\frac{3^{n}3n2^n}{(n+1)2^{n}2\cdot 3^{n}}\right]}\\
+		&\lim\limits_{n\rightarrow\infty}{\left[\frac{3n}{2n+2}\right]}=\frac{2}{3}
+		\end{align*}
+		}
+	\end{multicols}}
+	For any series $\sum\limits_{n=1}^{\infty}{a_n}$ find $\lim\limits_{n\rightarrow\infty}{\left|\frac{a_{n+1}}{a_n}\right|=L}$
+	\begin{enumerate}
+	\item If $L<1$, the series converges absolutely
+	\item If $L>1$ (or $\infty$), the series diverges
+	\item If $L=1$, no conclusion can be made
+	\end{enumerate}
+
+\section{Root Test}
+	For any series $\sum\limits_{n=1}^{\infty}{a_n}$ find $\lim\limits_{n\rightarrow\infty}{\left[\sqrt[\leftroot{-2}\uproot{2}n]{\left|a_n\right|}\right]=L}$
+	\begin{enumerate}
+		\item If $L<1$, the series converges absolutely
+		\item If $L>1$ (or $\infty$), the series diverges
+		\item If $L=1$, no conclusion can be made
+	\end{enumerate}
+
+\end{document}

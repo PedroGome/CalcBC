@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[american]{babel}
+
+\renewcommand{\rmdefault}{phv}
+\renewcommand{\sfdefault}{phv}
+\usepackage[a4paper,left=3cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\onehalfspacing
+
+\author{Pedro G\'{o}mez Mart\'{i}n}
+\date{\today}
+\title{Module 3 Lesson 3 Notes}
+
+\begin{document}
+\maketitle
+\section{Power Series}
+A power series is an infinite series of the form:
+\begin{equation*}
+\sum\limits_{n=0}^{\infty}{a_{n}x^n}=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}\dots
+\end{equation*}
+\begin{center}
+or
+\end{center}
+\begin{equation*}
+\sum\limits_{n=0}^{\infty}{a_{n}\left(x-c\right)^n}=a_{0}+a_{1}\left(x+c\right)+a_{2}\left(x+c\right)^{2}+a_{3}\left(x+c\right)^{3}\dots
+\end{equation*}
+it is centered at $c$
+\subsection{Geometric Power Series}
+\begin{multicols}{3}
+\begin{equation*}
+g\left(x\right)=\sum\limits_{n=0}^{\infty}{ax^{n}}=ax^{0}+a^{1}+ax^{2}+ax^{3}
+\end{equation*}
+\columnbreak
+\begin{equation*}
+\frac{a_0}{1-x}
+\end{equation*}
+\vfill\null
+\columnbreak
+Converges if $\left|x\right|<1$ 
+\end{multicols}
+\subsubsection*{Example}
+\begin{equation*}
+\sum\limits_{n=1}^{\infty}{\frac{x^{n}}{n\cdot 5^n}}\rightarrow\sum\limits_{n=1}^{\infty}{\frac{1}{n}\left(\frac{x}{5}\right)^{n}}
+\end{equation*}
+
+\end{document}

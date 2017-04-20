@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[american]{babel}
+\usepackage{lipsum}
+
+
+\usepackage[letterpaper,left=3cm,right=2cm,top=2.5cm,bottom=1.5cm]{geometry}
+\onehalfspacing
+
+\author{Pedro G\'{o}mez Mart\'{i}n}
+\date{\today}
+\title{Module 3 Lesson 5 Notes 1}
+
+\begin{document}
+\maketitle
+\section{Known Power Series}
+	\begin{align}
+		&e^{x}=&\sum\limits_{n=0}^{\infty}{\frac{x^n}{n!}}&=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dots\\
+		&\cos{x}=&\sum\limits_{n=0}^{\infty}{\frac{\left(-1\right)^{n}x^{2n}}{\left(2n\right)!}}&=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots\\
+		&\sin{x}=&\sum\limits_{n=0}^{\infty}{\frac{\left(-1\right)^{n}x^{2n+1}}{\left(2n+1\right)!}}&=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots\\
+		&\frac{1}{1-x}=&\sum\limits_{n=0}^{\infty}{x^n}&=1+x+x^2+x^3+\dots
+	\end{align}
+	
+\section{Substitution}
+	
+\section{Algebra}
+	\begin{equation*}
+		\frac{x}{1-x} = x\cdot \frac{1}{1-x} = x \sum\limits_{n=0}^{\infty}{x^n} = x\left(1+x+x^2+x^3+\dots \right) = \left(x+x^2+x^3+x^4+\dots \right) = \sum\limits_{n=0}^{\infty}{x^{n+1}}
+	\end{equation*}
+	\begin{flushright}
+		\boxed{\text{$-1<x<1$}}
+	\end{flushright}
+	\begin{equation*}
+	\frac{x}{3+x} = \frac{\frac{x}{3}}{1-\frac{-x}{3}} = \frac{x}{3}\sum\limits_{n=0}^{\infty}\left(\frac{-x}{3}\right)^{n} = \sum\limits_{n=0}^{\infty}\left(-1\right)^{n}\left(\frac{x}{3}\right)^{n+1}
+	\end{equation*}
+	\begin{flushright}
+		\boxed{\text{$-3<x<3$}}
+	\end{flushright}
+
+\section{Differentiation and Integration}
+	Let $f(x)=\sum\limits_{n=0}^{\infty}{a_n\left(x-a\right)^n}$ be a power series with a radius of convergence $R$. We then know that the function $f$ is defined on the interval $\left(a-\textbf{R},a+\textbf{R}\right)$ and may or may not be defined at the end points $a-R$ or $a+R$\\
+	Under those conditions, we have the following two theorems:
+	\begin{align*}
+		\left.1.\right)&\ f\text{ is differentiable on} \left(a-\textbf{R},a+\textbf{R}\right)\text{ and } f^{'}(x)=\sum\limits_{n=0}^{\infty}{na_{n}\left(x-a\right)^{n-1} }\\
+		\left.2.\right)&\text{ for }c\text{ and } d \text{ on } \left(a-\textbf{R},a+\textbf{R}\right) \text{ we have } \int\limits_{c}^{d}{f(x)dx}=\sum\limits_{n=0}^{\infty}a_{n}\int\limits_{c}^{d}\left(x-a\right)^{n}dx
+	\end{align*}
+	
+\end{document}
