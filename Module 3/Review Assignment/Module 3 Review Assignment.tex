@@ -66,11 +66,21 @@
 	
 \section{}
 	\begin{multicols}{3}
-		
+		\setlength{\columnseprule}{0.4pt}
+		$\left.a\right)\ \sum\limits_{n=1}^{\infty}\left(\sqrt{2}\right)^{n}$\\
+		geometric series\\
+		$r=\sqrt{2}$\\
+		$\left|r\right|>1$\\
+		the series diverges by the nth term test
 		\vfill\columnbreak
-		
+		$\left.b\right) \sum\limits_{n=1}^{\infty}\frac{\sqrt{n}}{n^2+\ln{\left(n\right)}}$\\
+		$\lim\limits_{n\rightarrow \infty}\left[\frac{n^{\frac{1}{2}}}{n^2} : \frac{1}{n^2}\right]$\\
+		$\lim\limits_{n\rightarrow \infty}\left[\frac{n^{\frac{1}{2}+2}}{n^2}\right]\rightarrow$ By the limit comparison test, both converge\\
+		and by direct comparison test $\sum\limits_{n=1}^{\infty}{\frac{\sqrt{n}}{n^2+\ln{\left(n\right)}}}$ converges absolutely.
 		\vfill\columnbreak
-		
+		$\sum\limits_{n=1}^{\infty}{e^{-1}n!}=\sum\limits_{n=1}^{\infty}{\frac{n!}{e^n}}$\\
+		$\lim\limits_{n\rightarrow \infty}\left[\sqrt[n]{\left|\frac{n!}{e^n}\right|}\right]=\infty$\\
+		by the Root test $\sum\limits_{n=1}^{\infty}{e^{-1}n!}$ diverges.
 	\end{multicols}
 	
 \end{document}
