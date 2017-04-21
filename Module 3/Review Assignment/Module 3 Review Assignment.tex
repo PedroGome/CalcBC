@@ -134,13 +134,20 @@
 		&\lim\limits_{n\rightarrow \infty}\left|\frac{x^{n+1}\left(3n+1\right)}{\left(3\left(n+1\right)\right)x^n}\right| = \lim\limits_{n\rightarrow \infty}\left|\frac{x\left(3n+1\right)}{3n+4}\right| = \lim\limits_{n\rightarrow \infty}\left[\left|x\right|\frac{3+\frac{1}{n}}{3+\frac{4}{n}}\right] = \left|x\right|\ \ \ -1<x<1&&
 	\end{flalign*}
 	
+	\begin{flalign*}
+		\left.b\right)&\sum\limits_{n=0}^{\infty}{\frac{4^n}{n!}\left(x-2\right)^n}&&\\
+		&\lim\limits_{n\rightarrow \infty}\left|\frac{\frac{4^{n}}{\left(n+1\right)!}\left(x-2\right)^{n+1}}{\frac{4^n}{n!}\left(x-2\right)^n}\right| = 
+		\lim\limits_{n\rightarrow \infty}\left|\frac{4^{n+1}}{\left(n+1\right)!}\left(x-2\right)^{n+1} \cdot \frac{n!}{4^n\left(x-2\right)^n} \right| = \fbox{$4\left(x-2\right)\lim\limits_{n\rightarrow \infty}\left[\dfrac{1}{n+1}\right] = 0$}&&
+	\end{flalign*}
+	The series converges in the $\left(-\infty , \infty\right)$ interval
+	
 \section{}
-	\begin{align*}
-		\left.a\right)\ &\sum\limits_{n=1}^{\infty}{\frac{1}{2+3^n}}\Rightarrow\lim\limits_{n\rightarrow \infty}\left|\frac{\frac{1}{2+3^{n+1}}}{\frac{1}{2+3^n}}\right| = \lim\limits_{n\rightarrow \infty}\left|\frac{2+3^n}{2+3^{n+1}}\right| = 0\\
-		\left.b\right)\ &\sum\limits_{n=0}^{\infty}{\frac{n}{n^3+4}} \Rightarrow\lim\limits_{n\rightarrow \infty}\left|\frac{\frac{n+1}{\left(n+1\right)^3+4}}{\frac{n}{n^3+4}}\right|=1\\
-		&\lim\limits_{n\rightarrow \infty}\left[\frac{\frac{n}{n^3+4}}{\frac{1}{n^2}}\right]\Rightarrow \lim\limits_{n\rightarrow \infty}\left[\frac{n^3}{n^3+4}\right] = \lim\limits_{n\rightarrow \infty}\left[\frac{1}{1+\frac{4}{n^3}}\right]= 0\\
-		\left.c\right)\ &\sum\limits_{n=0}^{\infty}{\left(-1\right)^{n+1}\frac{n^2}{3^n}}\Rightarrow \lim\limits_{n\rightarrow \infty}\left|\frac{\frac{\left(n+1\right)^2}{3^{\left(n+1\right)}}\left(-1\right)^{n+2} }{\frac{n^2}{3^n}\left(-1\right)^{n+1}}\right| = \lim\limits_{n\rightarrow \infty}\left[\frac{\not 3^{n} \left(n+1\right)^2 \left(-1\right)^{\not n +2}}{3\cdot \not 3^{n} \cdot n^2 \left(-1\right)^{\not n +1}}\right] = \lim\limits_{n\rightarrow \infty}\left[\left(-1\right)^2\frac{\left(n+1\right)^2}{n^2}\right] = 1
-	\end{align*}
+	\begin{flalign*}
+		\left.a\right)\ &\sum\limits_{n=1}^{\infty}{\frac{1}{2+3^n}}\Rightarrow\lim\limits_{n\rightarrow \infty}\left|\frac{\frac{1}{2+3^{n+1}}}{\frac{1}{2+3^n}}\right| = \lim\limits_{n\rightarrow \infty}\left|\frac{2+3^n}{2+3^{n+1}}\right| = 0&&\\
+		\left.b\right)\ &\sum\limits_{n=0}^{\infty}{\frac{n}{n^3+4}} \Rightarrow\lim\limits_{n\rightarrow \infty}\left|\frac{\frac{n+1}{\left(n+1\right)^3+4}}{\frac{n}{n^3+4}}\right|=1&&\\
+		&\lim\limits_{n\rightarrow \infty}\left[\frac{\frac{n}{n^3+4}}{\frac{1}{n^2}}\right]\Rightarrow \lim\limits_{n\rightarrow \infty}\left[\frac{n^3}{n^3+4}\right] = \lim\limits_{n\rightarrow \infty}\left[\frac{1}{1+\frac{4}{n^3}}\right]= 0&&\\
+		\left.c\right)\ &\sum\limits_{n=0}^{\infty}{\left(-1\right)^{n+1}\frac{n^2}{3^n}}\ \ \ \lim\limits_{n\rightarrow \infty}\left|\frac{\frac{\left(n+1\right)^2}{3^{n+1}}}{\frac{n^2}{3^n}}\right| = \lim\limits_{n\rightarrow \infty}\left|\frac{\left(n+1\right)^2}{3^{\not n+1}} \cdot \frac{\not 3^n}{n^2}\right| = \lim\limits_{n\rightarrow \infty}\left|\frac{\left(n+1\right)^2}{3n^2}\right| = \fbox{$\dfrac{1}{3}$}&&
+	\end{flalign*}
 	
 \section{}
 $\\$
