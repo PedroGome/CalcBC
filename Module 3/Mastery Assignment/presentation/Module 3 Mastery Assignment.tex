@@ -1,0 +1,185 @@
+\documentclass[10pt]{beamer}
+\usetheme[
+%%% option passed to the outer theme
+%    progressstyle=fixedCircCnt,   % fixedCircCnt, movingCircCnt (moving is deault)
+  ]{Feather}
+  
+% If you want to change the colors of the various elements in the theme, edit and uncomment the following lines
+
+% Change the bar colors:
+%\setbeamercolor{Feather}{fg=red!20,bg=red}
+
+% Change the color of the structural elements:
+%\setbeamercolor{structure}{fg=red}
+
+% Change the frame title text color:
+%\setbeamercolor{frametitle}{fg=blue}
+
+% Change the normal text color background:
+%\setbeamercolor{normal text}{fg=black,bg=gray!10}
+
+%-------------------------------------------------------
+% INCLUDE PACKAGES
+%-------------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{graphicx}
+
+%-------------------------------------------------------
+% DEFFINING AND REDEFINING COMMANDS
+%-------------------------------------------------------
+
+% colored hyperlinks
+\newcommand{\chref}[2]{
+  \href{#1}{{\usebeamercolor[bg]{Feather}#2}}
+}
+
+%-------------------------------------------------------
+% INFORMATION IN THE TITLE PAGE
+%-------------------------------------------------------
+
+\title[] % [] is optional - is placed on the bottom of the sidebar on every slide
+{ % is placed on the title page
+      \textbf{Module 3 Mastery Assignment}
+}
+
+\subtitle[]
+{
+      \textbf{ }
+}
+
+\author[Pedro G\'{o}mez Mart\'{i}n]
+{      Pedro G\'{o}mez Mart\'{i}n}
+
+\institute[]
+{
+
+  
+  %there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+\date{\today}
+
+%-------------------------------------------------------
+% THE BODY OF THE PRESENTATION
+%-------------------------------------------------------
+
+\begin{document}
+
+%-------------------------------------------------------
+% THE TITLEPAGE
+%-------------------------------------------------------
+
+{\1% % this is the name of the PDF file for the background
+\begin{frame}[plain,noframenumbering] % the plain option removes the header from the title page, noframenumbering removes the numbering of this frame only
+  \titlepage % call the title page information from above
+\end{frame}}
+
+
+\begin{frame}{Content}{}
+\tableofcontents
+\end{frame}
+
+%-------------------------------------------------------
+\section{Taylor Polynomials}
+%-------------------------------------------------------
+\subsection{Intro}
+\begin{frame}{Taylor Polynomials}{Intro}
+%-------------------------------------------------------
+We want to approximate the function $f(x)$ that satisfies the following conditions:
+\begin{itemize}
+	\item Is a real or a complex-value function.
+	\item It is infinitely differentiable at $c$
+\end{itemize}
+
+\end{frame}
+
+\subsection{Intuitive Derivation}
+\begin{frame}{Taylor Polynomials}{Intuitive Derivation}
+%-------------------------------------------------------
+\begin{align*}
+	P\left(0\right)=&f\left(0\right)\\
+	P\left(x\right)=&f\left(0\right)
+\end{align*}
+	
+\end{frame}
+
+\begin{frame}{Taylor Polynomials}{Intuitive Derivation}
+	%-------------------------------------------------------
+	\begin{align*}
+	P^{'}\left(0\right)=&f^{'}\left(0\right)\\
+	P\left(x\right)=&f\left(0\right)+f^{'}\left(0\right)x
+	\end{align*}
+	
+\end{frame}
+
+\begin{frame}{Taylor Polynomials}{Intuitive Derivation}
+	%-------------------------------------------------------
+	\begin{align*}
+	P^{''}\left(0\right)=&f^{''}\left(0\right)\\
+	P\left(x\right)=&f\left(0\right)+f^{'}\left(0\right)x+\frac{1}{2}f^{''}\left(0\right)x^2
+	\end{align*}
+	
+\end{frame}
+
+\begin{frame}{Taylor Polynomials}{Intuitive Derivation}
+	%-------------------------------------------------------
+	\begin{align*}
+	P^{'''}\left(0\right)=&f^{'''}\left(0\right)\\
+	P\left(x\right)=&f\left(0\right)+f^{'}\left(0\right)x+\frac{1}{2}f^{''}\left(0\right)x^2+\frac{1}{2\cdot 3}f^{'''}\left(c\right)x^3
+	\end{align*}
+	
+\end{frame}
+
+\begin{frame}{Taylor Polynomials}{Intuitive Derivation}
+	%-------------------------------------------------------
+	\begin{align*}
+	P^{\left(4\right) }\left(0\right)=&f^{\left(4\right)}\left(0\right)\\
+	P\left(x\right)=&f\left(0\right)+f^{'}\left(0\right)x+\frac{1}{2}f^{''}\left(0\right)x^2+\frac{1}{2\cdot 3}f^{'''}\left(c\right)x^3+\frac{1}{2\cdot 3\cdot 4}f^{(4)}\left(0\right)x^4
+	\end{align*}
+	
+\end{frame}
+
+\begin{frame}{Taylor Polynomials}{Intuitive Derivation}
+	%-------------------------------------------------------
+	\begin{align*}
+	P^{\left(4\right) }\left(0\right)=&f^{\left(4\right)}\left(0\right)\\
+	P\left(x\right)=&f\left(0\right)+f^{'}\left(0\right)x+\frac{1}{2}f^{''}\left(0\right)x^2+\frac{1}{2\cdot 3}f^{'''}\left(c\right)x^3+\frac{1}{2\cdot 3\cdot 4}f^{(4)}\left(0\right)x^4\\
+	&+ \dots +\frac{1}{n!}f^{(n)}\left(0\right)x^n
+	\end{align*}
+	
+\end{frame}
+
+\begin{frame}{Taylor Polynomials}{Intuitive Derivation}
+	%-------------------------------------------------------
+	\begin{align*}
+	\sum\limits_{n=0}^{\infty}\frac{1}{n!}f^{(n)}\left(0\right)x^n
+	\end{align*}
+	
+\end{frame}
+
+%-------------------------------------------------------
+\section{License}
+%-------------------------------------------------------
+\begin{frame}{License}{GNU GPLv3}
+%-------------------------------------------------------
+	\begin{block}{GNU GPLv3}
+		This entire presentation is under the GNU General Public License v3\\
+		\begin{figure}
+			\centering
+			\def\svgwidth{\columnwidth}
+			\input{image.pdf_tex}
+		\end{figure}
+	\end{block}
+	
+\end{frame}
+
+\end{document}
