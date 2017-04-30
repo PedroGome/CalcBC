@@ -113,7 +113,7 @@ We want to approximate the function $f(x)$ that satisfies the following conditio
 \end{frame}
 
 \begin{frame}{Taylor Polynomials}{Intuitive Derivation}
-	%-------------------------------------------------------
+%-------------------------------------------------------
 	\begin{align*}
 	P^{'}\left(0\right)=&f^{'}\left(0\right)\\
 	P\left(x\right)=&f\left(0\right)+f^{'}\left(0\right)x
@@ -122,7 +122,7 @@ We want to approximate the function $f(x)$ that satisfies the following conditio
 \end{frame}
 
 \begin{frame}{Taylor Polynomials}{Intuitive Derivation}
-	%-------------------------------------------------------
+%-------------------------------------------------------
 	\begin{align*}
 	P^{''}\left(0\right)=&f^{''}\left(0\right)\\
 	P\left(x\right)=&f\left(0\right)+f^{'}\left(0\right)x+\frac{1}{2}f^{''}\left(0\right)x^2
@@ -149,7 +149,7 @@ We want to approximate the function $f(x)$ that satisfies the following conditio
 \end{frame}
 
 \begin{frame}{Taylor Polynomials}{Intuitive Derivation}
-	%-------------------------------------------------------
+%-------------------------------------------------------
 	\begin{align*}
 	P^{\left(4\right) }\left(0\right)=&f^{\left(4\right)}\left(0\right)\\
 	P\left(x\right)=&f\left(0\right)+f^{'}\left(0\right)x+\frac{1}{2}f^{''}\left(0\right)x^2+\frac{1}{2\cdot 3}f^{'''}\left(c\right)x^3+\frac{1}{2\cdot 3\cdot 4}f^{(4)}\left(0\right)x^4\\
@@ -159,9 +159,60 @@ We want to approximate the function $f(x)$ that satisfies the following conditio
 \end{frame}
 
 \begin{frame}{Taylor Polynomials}{Intuitive Derivation}
-	%-------------------------------------------------------
+%-------------------------------------------------------
 	\begin{align*}
-	\sum\limits_{n=0}^{\infty}\frac{1}{n!}f^{(n)}\left(0\right)x^n
+	\sum\limits_{n=0}^{\infty}\frac{f^{(n)}\left(0\right)}{n!}\cdot x^n
+	\end{align*}
+	
+\end{frame}
+
+\begin{frame}{Taylor Polynomials}{Intuitive Derivation}
+%-------------------------------------------------------
+	\begin{align*}
+		P{\left(x\right)}=&f\left(c\right)\ \longrightarrow\ P(c)=f(c)\\
+		P\left(x\right) = &f\left(c\right) + f^{'}\left(c\right)(x-c) + \frac{1}{2}f^{''}\left(c\right)(x-c)^2 + \frac{1}{2\cdot 3}f^{'''}\left(c\right)(x-c)^3\\
+		&+ \frac{1}{2\cdot 3\cdot 4}f^{(4)}\left(c\right)(x-c)^4 + \dots +\frac{1}{n!}f^{(n)}\left(c\right)(x-c)^n\\
+		\ &\\
+		P(c)=&f(c)+f^{'}(c)(c-c)+\cdots+\frac{f^{(n)}(c)}{n!}(x-c)^{n}
+	\end{align*}
+	
+\end{frame}
+
+\subsection{Example}
+\begin{frame}{Taylor Polynomials}{Example}
+%-------------------------------------------------------
+	Approximating $\sin (x)$\\
+	\begin{flalign*}
+		&f(x)&=&\sin(x)&&\\
+		&f^{'}(x)&=&\cos (x)&&\\
+		&f^{''}(x)&=&-\sin (x)&&\\
+		&f^{(3)}(x)&=&-\cos (x)&&
+	\end{flalign*}
+	
+\end{frame}
+
+\begin{frame}{Taylor Polynomials}{Example}
+%-------------------------------------------------------
+	\begin{flalign*}
+	&f(0)&=&\sin(0)=0&&\\
+	&f^{'}(0)&=&\cos (0)= 1&&\\
+	&f^{''}(0)&=&-\sin (0)= 0&&\\
+	&f^{(3)}(0)&=&-\cos (0)= -1&&
+	\end{flalign*}
+	
+\end{frame}
+
+\begin{frame}{Taylor Polynomials}{Example}
+%-------------------------------------------------------
+	Since it becomes cyclic, we can 
+	\begin{flalign*}
+		&\sum\limits_{n=0}^{\infty}\frac{f^{(n)}\left(0\right)}{n!}\left(x\right)^{n}&&\\
+		&\frac{0}{0!}{x^0}+\frac{1}{1!}x^1+\frac{0}{2!}x^2+\frac{-1}{3!}x^3+\frac{0}{4!}x^4+\frac{1}{5!}x^5+\frac{0}{6!}x^6+\frac{-1}{7!}x^7&&\\
+		&x-\left(3!\right)^{-1}x^3+\left(5!\right)^{-1}x^5-\left(7!\right)^{-1}x^7&&
+	\end{flalign*}
+	A clear pattern begins to form, we can condense it into:
+	\begin{align*}
+		\sum\limits_{n=1}^{\infty}\left(-1\right)^{\left(n+1\right)}\frac{x^{\left(2n-1\right)}}{\left(2n-1\right)!}
 	\end{align*}
 	
 \end{frame}

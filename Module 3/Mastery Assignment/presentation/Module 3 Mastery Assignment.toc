@@ -3,4 +3,5 @@
 \beamer@sectionintoc {1}{Taylor Polynomials}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Intro}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{Intuitive Derivation}{4}{0}{1}
-\beamer@sectionintoc {2}{License}{11}{0}{2}
+\beamer@subsectionintoc {1}{3}{Example}{12}{0}{1}
+\beamer@sectionintoc {2}{License}{15}{0}{2}
