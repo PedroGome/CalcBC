@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[american]{babel}
+\usepackage{lipsum}
+\usepackage{enumitem}
+
+\usepackage[letterpaper,left=3cm,right=2cm,top=2.5cm,bottom=1.5cm]{geometry}
+\onehalfspacing
+
+\author{Pedro G\'{o}mez Mart\'{i}n}
+\date{\today}
+\title{Module 4 Review Assignment}
+
+\begin{document}
+\maketitle
+
+\begin{flalign*}
+  x=e^{t} \ \&\ y=\cos{t}
+\end{flalign*}
+
+  \begin{enumerate}
+  \item {Find the total distance traveled on the close interval
+      $\left[0,2\right]$}
+    \begin{flalign*}
+      \int\limits_{0}^{2}\sqrt{1+\left(\frac{-\sin t}{e^t}\right)^2}e^t dt \approx 6.558&&
+    \end{flalign*}
+     
+  \item{Find the speed of the particle at $t=2$}
+    \begin{flalign*}
+      -\frac{\sin(t)}{e^t} \Rightarrow \frac{-\sin 2}{e^2} \approx -0.123&&
+    \end{flalign*}
+    
+  \item{Find $\frac{dy}{dx}$}
+    \begin{flalign*}
+      -\frac{\sin (t)}{e^t}&&
+    \end{flalign*}
+
+  \item{Find $\frac{d^2 y}{dx^2}$}
+  \end{enumerate}
+\end{document}
