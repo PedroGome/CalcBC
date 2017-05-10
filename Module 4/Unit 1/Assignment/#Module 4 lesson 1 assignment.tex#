@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[american]{babel}
+\usepackage{lipsum}
+
+
+\usepackage[letterpaper,left=3cm,right=2cm,top=2.5cm,bottom=1.5cm]{geometry}
+\onehalfspacing
+
+\author{Pedro G\'{o}mez Mart\'{i}n}
+\date{\today}
+\title{Module 4 Lesson 1 Assignment}
+
+\begin{document}
+\maketitle
+
+\begin{align*}
+  \text{hello world}
+\end{align*}
+\s
+
+\end{document}
