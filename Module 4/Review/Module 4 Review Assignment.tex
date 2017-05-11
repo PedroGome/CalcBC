@@ -25,22 +25,64 @@
 \end{flalign*}
 
   \begin{enumerate}
-  \item {Find the total distance traveled on the close interval
+  \item\textbf {Find the total distance traveled on the close interval
       $\left[0,2\right]$}
     \begin{flalign*}
       \int\limits_{0}^{2}\sqrt{1+\left(\frac{-\sin t}{e^t}\right)^2}e^t dt \approx 6.558&&
     \end{flalign*}
      
-  \item{Find the speed of the particle at $t=2$}
+  \item\textbf{Find the speed of the particle at $t=2$}
     \begin{flalign*}
       -\frac{\sin(t)}{e^t} \Rightarrow \frac{-\sin 2}{e^2} \approx -0.123&&
     \end{flalign*}
     
-  \item{Find $\frac{dy}{dx}$}
+  \item\textbf{Find $\frac{dy}{dx}$}
     \begin{flalign*}
       -\frac{\sin (t)}{e^t}&&
     \end{flalign*}
 
-  \item{Find $\frac{d^2 y}{dx^2}$}
+  \item\textbf{Find $\frac{d^2 y}{dx^2}$}
+    \begin{flalign*}
+      \frac{\frac{d}{dt}\left[-\sin (t) e^{-t}\right]}{e^t} \Rightarrow
+      \frac{-\left(\cos(t)e^{-t}+\left(-e^{-t}\right)\sin (t)\right)}{e^t} =
+      -\frac{e^{-t}\left(\cos (t)-\sin (t)\right)}{e^t}&&
+    \end{flalign*}
+
+    \item\textbf{Let $p(t)$ be the distance, in meters, from the point $(0,1)$ at time
+        $t$. $\vec{p}=\left\langle 2t,\cos(t)\right\rangle$}
+      \begin{enumerate}[label=\alph*]
+      \item
+        \begin{flalign*}
+          -\frac{\sin(t)}{2} \rightarrow \frac{-\frac{\cos(t)}{2}}{2} = -\frac{1}{4}\cos(t)&&
+        \end{flalign*}
+      \item
+        \begin{flalign*}
+          -\frac{1}{4}\cos \left(\cos\frac{5\pi}{6}\right) =
+          -\frac{1}{4}\left(-\frac{\sqrt{3}}{2}\right) = \frac{\sqrt{3}}{8}&&
+        \end{flalign*}
+
+      \end{enumerate}
+    \item\textbf{Using $\vec{p}=\left\langle 2t,\cos(t)\right\rangle$ explain what the
+        acceleration of the particle means in relation to its position at
+        $t=\frac{5\pi}{6}$}\\
+      It means that at the time $\frac{5\pi}{6}$ the velocity of the particle is
+      changing at a rate of $\frac{\sqrt{3}}{8}$
+    \item\textbf {Determine the position vector given the following:}
+     
+      \begin{align*}
+        \vec{a}(t)&=\left\langle \sqrt{t},t+1 \right\rangle\\
+        \vec{v}(0)&=\left\langle 1 , 2 \right\rangle\\
+        \vec{p}(0)&=\left\langle -1 , 5 \right\rangle
+      \end{align*}
+      \begin{flalign*}
+        &\int \vec{a}(t)\ dt \rightarrow \int \vec{v}(t)\ dt \longrightarrow \vec{p}(t)& &&\\
+        &\frac{2}{3}t^{\frac{3}{2}}+c \Rightarrow \frac{2}{3}0^{\frac{3}{2}}+c=1 \rightarrow c=1 & \frac{t^2}{2}+t+c \Rightarrow \frac{0^2}{2}+0+c=2 \rightarrow c=2 &&\\
+        &\frac{2}{3}\cdot\frac{t^{\frac{5}{2}}}{\frac{5}{2}} + t + c \Rightarrow \frac{4}{15}0^{\frac{5}{2}}+ 0 +c =-1 \rightarrow c=-1 & \frac{t^3}{6}+\frac{t^2}{2}+2t+c=5 \Rightarrow  \frac{0^3}{6}+\frac{0^2}{2}+2(0)+c=5 \rightarrow c=5 && 
+      \end{flalign*}
+      \begin{align*}
+        \vec{p}(t)=\left\langle \frac{4}{15}t^{\frac{5}{2}}+t-1\ ,\ \frac{t^3}{6}+\frac{t^2}{2}+2t+5 \right\rangle
+      \end{align*}
+      \textbf{Then use it to determine the value of $\vec{p}(7)$}\\
+      
   \end{enumerate}
 \end{document}
