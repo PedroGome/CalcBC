@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[american]{babel}
+\usepackage{lipsum}
+\usepackage{enumitem}
+
+\usepackage[letterpaper,left=3cm,right=2cm,top=2.5cm,bottom=1.5cm]{geometry}
+\onehalfspacing
+
+\author{Pedro G\'{o}mez Mart\'{i}n}
+\date{\today}
+\title{Module 4 Lesson 2 Assignment 1}
+
+\begin{document}
+\maketitle
+
+\section{The motion of a particle is described by the set of parametric equations $\boldsymbol{x=\dfrac{t}{5}+1,y=2t-e^{\frac{t}{2}}+1}$ for $\boldsymbol{0<t<5}$.}
+
+\begin{enumerate}[label=$\boldsymbol{\left.\alph*\right)}$]
+\item Find the coordinates of the absolute maximum and minimum.  Justify your
+  answer.\\
+  \begin{flalign*}
+    5\left( 2-\frac{e^{\frac{t}{2}}}{2} \right)=&0&&\\
+    \frac{5}{2}e^{\frac{t}{2}}=&10&&\\
+    e^{\frac{t}{2}}=&8&&\\
+    t=&2\ln{(8)}&&
+  \end{flalign*}
+\item{Find the x-intercept of the line tangent to the graph at t = 2.}\\
+  when $t=2$ the $x$ and $y$ equal $\left( \frac{7}{5},5-e \right)$
+  \begin{multicols}{2}
+    \begin{flalign*}
+      &5\left( 2-\frac{e^{\frac{2}{2}}}{2} \right)&&\\
+      &10-\frac{5}{2}e&&
+    \end{flalign*}
+    \vfill\columnbreak
+    \begin{flalign*}
+      0&=\left( 10-\frac{5}{2}e \right)\left( x-\frac{7}{5} \right)+5-e&&\\
+      e-5&=10x-\frac{5e}{2}x-14+\frac{7e}{2}&&\\
+      9-\frac{5e}{2}&=x\left( 10-\frac{5e}{2} \right)&&\\
+      \frac{9-\frac{5e}{2}}{10-\frac{5e}{2}}&=x&&
+    \end{flalign*}
+  \end{multicols}
+  
+  \item{Find the length of the graph from $t = 0$ to $t = 5$.}
+    \begin{flalign*}
+      &\int\limits_{0}^{5} \sqrt{1+\left( 10-\frac{e^{\frac{t}{2}}}{2} \right)}dt&&
+    \end{flalign*}
+\end{enumerate}
+
+\end{document}
