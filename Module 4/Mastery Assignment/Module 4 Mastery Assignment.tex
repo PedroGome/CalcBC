@@ -1,0 +1,37 @@
+\documentclass[landscape]{article}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage[american]{babel}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[letterpaper,left=3cm,right=2cm,top=2.5cm,bottom=1.5cm]{geometry}
+\usepackage{color}
+
+\begin{document}
+\begin{multicols}{2}
+  \section{Length of a vector}
+  \begin{align*}
+    \int\limits_{\alpha}^{\beta}\sqrt{1+\left(\frac{\color{red}dy}{\color{green}dx}\right)^{2}}{\color{green}\frac{dx}{dt}}\ dt
+  \end{align*}
+  \vfill\columnbreak
+  \section{Derivatives}
+  \begin{align*}
+    \vec{r}(t)&=\left\langle {\color{green}x(t)} , {\color{red}y(t)} \right\rangle\\
+    \text{First Derivative}&=\dfrac{\color{red}\frac{dy}{dt}}{\color{green}\frac{dx}{dt}}=\frac{\color{red}dy}{\color{green}dx}\\
+    \text{Second Derivative}&=\dfrac{\frac{d}{dt}\left[ \frac{\color{red}dy}{\color{green}dx} \right]}{\color{green}\frac{dx}{dt}}
+  \end{align*}
+\end{multicols}
+\section{Example}
+Find the area below the following vector from time $t=1$ to $t=5$
+\
+\begin{flalign*}
+  &\vec{r}(t)=\left\langle {\color{green}e^t} ,{\color{red}\cos (t)} \right\rangle&&
+\end{flalign*}
+\begin{align*}
+  \text{Find out slope at time }t\ \Longrightarrow &\frac{\color{red}-\sin(t)}{\color{green}e^t}\\
+  \text{Find the area}\ \Longrightarrow &\ \int\limits_{1}^{5}\sqrt{1+\left( \frac{\color{red}-\sin(t)}{\color{green}e^t} \right)^2}{\color{green}e^t}\\
+  \text{Using the calculator, we obtain that the area is}\ &\approx\ 
+\end{align*}
+\end{document}
