@@ -26,6 +26,7 @@ it is symmetric and that it is similar to the derivative of the logistic
 equation, with that intuition, we can come up with the following differential
 equation:
 \begin{equation}
+  \label{eq:Differential equation intuition}
   \frac{df}{dx}=-k(x-\mu)f(x)
 \end{equation}
 Where $k$ is the constant that defines the rate at which it decreases, $(x-\mu)$
@@ -34,4 +35,14 @@ fall off proportionally to the distance of the score from the mean, and $f(x)$
 to the frequencies themselves.
 
 \section{Solution to the Intuition}
+With a differential equation, we can now find a solution:
+\begin{align}
+  \frac{df}{f}&=-k(x-\mu)dx\\
+  \int\frac{1}{f}df&=-k\int (x-\mu)dx\\
+  \ln (f)&=\left[ \frac{-k(x-\mu)^2}{2} +C \right]\\
+  f&=e^{-k\frac{\left(x-\mu\right)^2}{2}+C}\\
+  f&=e^{-k\frac{\left(x-\mu\right)^2}{2}}e^C\\
+  f&=Ce^{-k\frac{\left(x-\mu\right)^2}{2}}
+\end{align}
+
 \end{document}

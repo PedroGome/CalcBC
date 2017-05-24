@@ -15,6 +15,8 @@
     "tabularx"
     "babel"
     "enumerate"
-    "geometry"))
+    "geometry")
+   (LaTeX-add-labels
+    "eq:Differential equation intuition"))
  :latex)
 
