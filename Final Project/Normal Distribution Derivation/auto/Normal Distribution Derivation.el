@@ -17,6 +17,7 @@
     "enumerate"
     "geometry")
    (LaTeX-add-labels
-    "eq:Differential equation intuition"))
+    "eq:Differential equation intuition"
+    "eq:General Solution"))
  :latex)
 

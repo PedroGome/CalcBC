@@ -42,7 +42,84 @@ With a differential equation, we can now find a solution:
   \ln (f)&=\left[ \frac{-k(x-\mu)^2}{2} +C \right]\\
   f&=e^{-k\frac{\left(x-\mu\right)^2}{2}+C}\\
   f&=e^{-k\frac{\left(x-\mu\right)^2}{2}}e^C\\
-  f&=Ce^{-k\frac{\left(x-\mu\right)^2}{2}}
+  f&=e^{-k\frac{\left(x-\mu\right)^2}{2}}C
 \end{align}
+\begin{equation*}
+  \label{eq:General Solution}
+  f(x)=Ce^{-k\frac{\left(x-\mu\right)^2}{2}}
+\end{equation*}
+
+\section{Specific Solution}
+\subsection{Solve for C}
+Now we know a general solution to the differential equation, but that by itself
+is not helpful when trying to find the probability of an event that follows a
+normal distribution.
+
+To find this specific solution, we start by taking the definite integral from
+$-\infty$ to $\infty$ since we know that the area under the curve is $1$.
+
+\begin{equation}
+  C\int\limits_{-\infty}^{\infty}e^{-\frac{k}{2}\left(x-\mu\right)^2}\ dx=1
+\end{equation}
+
+\subsubsection{U-Substitution}
+
+To integrate this expression, u-substitution is really useful:
+
+\begin{multicols}{3}
+  \begin{equation}
+    u=\sqrt{\frac{k}{2}}(x-\mu)
+  \end{equation}
+  \vfill\columnbreak
+  \begin{equation}
+    \frac{k}{2}(x-\mu^2)=u^2
+  \end{equation}
+  \vfill\columnbreak
+  \begin{equation}
+    du=\sqrt{\frac{k}{2}}dx\Longrightarrow dx=\sqrt{\frac{2}{k}}du
+  \end{equation}
+\end{multicols}
+Therefore:
+\begin{equation}
+  C\int\limits_{-\infty}^{\infty}e^{-\frac{k}{2}(x-\mu)^2}dx=C\sqrt{\frac{2}{k}} \int\limits_{-\infty}^{\infty}e^{-u^2}du=1
+\end{equation}
+
+\subsubsection{Preparation for Polar Coordinates}
+
+If we square the expression we obtain the following:
+\begin{align}
+  \left( C\sqrt{\frac{2}{k}}\int\limits_{-\infty}^{\infty}e^{-u^2}du \right)^2&=1^2\\
+  \frac{2C^2}{k}\left( \int\limits_{-\infty}^{\infty}e^{-x^2}dx \right)  \left(\int\limits_{-\infty}^{\infty}e^{-y^2}dy \right)&=1
+\end{align}
+When the two integrals are separated, we can use different variables for each
+one. Then, by Fubini's Theorem, we obtain the following:
+
+\begin{align}
+  \frac{2C^2}{k}\int\limits_{-\infty}^{\infty}\int\limits_{-\infty}^{\infty}e^{-\left[ x^2+y^2 \right]} dx\ dy = 1
+\end{align}
+
+\subsubsection{Translate to Polar Coordinates}
+
+\begin{align}
+  \frac{2C^2}{k}\int\limits_{0}^{2\pi}\int\limits_{0}^{\infty}re^{-r^2} dr\ d\theta = 1
+\end{align}
+
+\subsubsection{U-Substitution and Solving}
+
+\begin{multicols}{2}
+  $v = -r^2$
+  \vfill\columnbreak
+  $dv = -2r\ dr$
+\end{multicols}
+
+\begin{align}
+  \frac{C^2}{k}\int\limits_{0}^{2\pi}\int\limits_{0}^{\infty}-e^{-v}dv\ d\theta &= 1\\
+  \frac{C^2}{k}\int\limits_{0}^{2\pi}1\ d\theta &= 1\\
+  \frac{C^2}{k}2\pi &= 1\\
+  C^2 &= \frac{k}{2\pi}\\
+  C &= \sqrt{\frac{k}{2\pi}}
+\end{align}
+
+\subsection{Solving for k}
 
 \end{document}
