@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[american]{babel}
+\usepackage{enumerate}
+
+
+\usepackage[letterpaper,left=3cm,right=2cm,top=2.5cm,bottom=1.5cm]{geometry}
+\onehalfspacing
+
+\author{Pedro G\'{o}mez Mart\'{i}n}
+\date{\today}
+\title{Normal Distribution Derivation}
+
+\begin{document}
+\maketitle
+
+\section{Intuition}
+
+First, to derive this incredibly useful formula, we start by the intuition that
+it is symmetric and that it is similar to the derivative of the logistic
+equation, with that intuition, we can come up with the following differential
+equation:
+\begin{equation}
+  \frac{df}{dx}=-k(x-\mu)f(x)
+\end{equation}
+Where $k$ is the constant that defines the rate at which it decreases, $(x-\mu)$
+describes the center, and $x$ describes the rate at which the frequencies
+fall off proportionally to the distance of the score from the mean, and $f(x)$
+to the frequencies themselves.
+
+\section{Solution to the Intuition}
+\end{document}
