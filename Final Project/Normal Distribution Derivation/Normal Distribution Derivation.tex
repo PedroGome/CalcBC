@@ -24,6 +24,7 @@
 
 \begin{document}
 \maketitle
+\tableofcontents
 
 \section{Intuition}
 
@@ -177,8 +178,39 @@ is necessary to manipulate the distribution in order to find $\sigma$
 \end{multicols}
 
 \begin{align}
-  \sigma^2
+  \sigma^2=\sqrt{\frac{k}{2\pi}}\int\limits_{-\infty}^{\infty}w^2 e^{-\frac{k}{2}w^2}dw
 \end{align}
 
+\subsubsection{Integration by Parts}
+
+\begin{multicols}{2}
+  \begin{align*}
+    u=w\\
+    du=dw
+  \end{align*}
+  \vfill\columnbreak
+  \begin{align*}
+    v=-\frac{1}{k}e^{-\frac{k}{2}w^2}\\
+    dv=we^{-\frac{k}{2}w^2}dw
+  \end{align*}
+\end{multicols}
+
+\begin{align}
+  \sqrt{\frac{k}{2\pi}}\left[ -\frac{ve^{-\frac{k}{2}v^2}}{k} \right] _{-\infty}^{\infty}
+  + \frac{1}{k}\sqrt{\frac{k}{2\pi}}\int\limits_{-\infty}^{\infty}e^{-\frac{k}{2}w^2}dw
+\end{align}
+
+The first part simply reduces to $0$ and in the second one, the integral
+part,since it is the area under a bell shaped curve ends up being equal to $1$
+when multiplied by $\sqrt{\frac{k}{2\pi}}$, leaving $\sigma^2=\frac{1}{k}$ or
+solving for $k$, $k=\frac{1}{\sigma^2}$
+
+\section{Gaussian Distribution Probability Density Function}
+
+And Finally, the Normal Distribution Curve formula:
+\begin{align}
+  \label{eq:pdf}
+  f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left( \frac{x-\mu}{\sigma} \right)^2}
+\end{align}
 
 \end{document}

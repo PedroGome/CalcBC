@@ -1,0 +1,13 @@
+\select@language {american}
+\contentsline {section}{\numberline {1}Intuition}{1}
+\contentsline {section}{\numberline {2}Solution to the Intuition}{2}
+\contentsline {section}{\numberline {3}Specific Solution}{2}
+\contentsline {subsection}{\numberline {3.1}Solve for C}{2}
+\contentsline {subsubsection}{\numberline {3.1.1}U-Substitution}{2}
+\contentsline {subsubsection}{\numberline {3.1.2}Preparation for Polar Coordinates}{3}
+\contentsline {subsubsection}{\numberline {3.1.3}Translate to Polar Coordinates}{3}
+\contentsline {subsubsection}{\numberline {3.1.4}U-Substitution and Solving}{3}
+\contentsline {subsection}{\numberline {3.2}Solving for k}{3}
+\contentsline {subsubsection}{\numberline {3.2.1}Intuition}{4}
+\contentsline {subsubsection}{\numberline {3.2.2}Integration by Parts}{4}
+\contentsline {section}{\numberline {4}Gaussian Distribution Probability Density Function}{5}

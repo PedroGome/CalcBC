@@ -20,6 +20,7 @@
    (LaTeX-add-labels
     "eq:Differential equation intuition"
     "eq:General Solution"
-    "eq:Distribution"))
+    "eq:Distribution"
+    "eq:pdf"))
  :latex)
 
