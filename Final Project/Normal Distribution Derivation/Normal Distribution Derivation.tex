@@ -7,6 +7,12 @@
 \usepackage{tabularx}
 \usepackage[american]{babel}
 \usepackage{enumerate}
+\usepackage{pgfplots}
+
+%Plot functions
+\pgfplotsset{width=10cm}
+\usepgfplotslibrary{external}
+\tikzexternalize
 
 
 \usepackage[letterpaper,left=3cm,right=2cm,top=2.5cm,bottom=1.5cm]{geometry}
@@ -121,5 +127,73 @@ one. Then, by Fubini's Theorem, we obtain the following:
 \end{align}
 
 \subsection{Solving for k}
+
+Now we can substitute $C$ with can solve for $k$
+
+\begin{equation}
+  \label{eq:Distribution}
+  Ce^{-\frac{k}{2}\left( x - \mu \right)^2} \longrightarrow f(x)=\sqrt{\frac{k}{2\pi}}e^{-\frac{k}{2}\left( x - \mu \right)^2}
+\end{equation}
+
+\subsubsection{Intuition}
+
+Since $k$ defines the spread of the distribution $f(x)$, we can calculate the
+Expected value to find the variance $\sigma^2$, the expected value can be
+computed in this case through $E[X]=\int\limits_{-\infty}^{\infty}xf(x)dx$, it
+is necessary to manipulate the distribution in order to find $\sigma$
+
+\begin{align*}
+  x-\mu = v\\
+  dx=dv
+\end{align*}
+
+\begin{align}
+  E(v)=\sqrt{\frac{k}{2\pi}}\int\limits_{-\infty}^{\infty}ve^{-\frac{k}{2}v^2}dv 
+\end{align}
+
+\begin{align*}
+  w=-\frac{k}{2}v^2\\
+  dw=-kv\ dv\\
+  v\ dv = -\frac{1}{k}dw
+\end{align*}
+
+\begin{align}
+  E(v)=\sqrt{\frac{1}{2\pi k}}\int\limits_{-\infty}^{\infty}e^{w}dw = \sqrt{\frac{1}{2\pi k}}[0-0] = 0
+\end{align}
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[enlargelimits=0.1]
+    \addplot[name path=f,domain=-.15:1.05,blue] {x^2};
+
+    \path[name path=axis] (axis cs:0,0) -- (axis cs:1,0);
+
+    \addplot [
+        thick,
+        color=blue,
+        fill=blue, 
+        fill opacity=0.05
+    ]
+    fill between[
+        of=f and axis,
+        soft clip={domain=0:1},
+    ];
+
+    \node [rotate=48] at (axis cs:  .7,  .59) {$y=x^2$};
+    \node [rotate=90] at (axis cs:  1.05,  .25) {$x=1$};
+    \end{axis}
+  \end{tikzpicture}
+\end{figure}
+
+\begin{align*}
+  E(x)=E(v)+\mu = \mu
+\end{align*}
+
+\begin{align}
+  \sigma^{2}=\int\limits_{-\infty}^{\infty}\left( x-\mu \right)^2 f(x)\ dx = \sqrt{\frac{k}{2\pi}} \int\limits_{-\infty}^{\infty}\left( x-\mu \right)^2 e^{-\frac{k}{2}\left( x-\mu \right)^2}dx
+\end{align}
+
+
 
 \end{document}

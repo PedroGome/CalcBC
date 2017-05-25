@@ -15,9 +15,11 @@
     "tabularx"
     "babel"
     "enumerate"
+    "pgfplots"
     "geometry")
    (LaTeX-add-labels
     "eq:Differential equation intuition"
-    "eq:General Solution"))
+    "eq:General Solution"
+    "eq:Distribution"))
  :latex)
 
