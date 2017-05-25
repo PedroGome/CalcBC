@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1495680207 "Normal Distribution Derivation.tex" "Normal Distribution Derivation.pdf" "Normal Distribution Derivation" 1495680208
+["pdflatex"] 1495683081 "Normal Distribution Derivation.tex" "Normal Distribution Derivation.pdf" "Normal Distribution Derivation" 1495683082
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1492575644 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1492575651 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1492575651 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -192,14 +192,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1492575665 31661 3832dc67fcae1bb0c47594ea86c25797 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1494978094 2220423 fef69922126604e2c6136500ed3e2ad4 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1494978077 7587051 e2b72c97cad0be787cc5fe4132052cc3 ""
-  "Normal Distribution Derivation.aux" 1495680208 1397 da81b824c4b2e6312e34f91a3d6b74b6 ""
-  "Normal Distribution Derivation.tex" 1495680207 6357 12be6b259d51a7ddad43f588f687532b ""
-  "Normal Distribution Derivation.toc" 1495680208 883 9c95697203c87a0556633fd46cf6ad05 ""
+  "Normal Distribution Derivation.aux" 1495683082 1897 2fb303f4d0b157962f1360b59e261241 ""
+  "Normal Distribution Derivation.tex" 1495683080 7790 82dd86fb1ae98140853bbce2f066062a ""
+  "Normal Distribution Derivation.toc" 1495683082 1275 570376c0de94e4f875db8019ed8cfc84 ""
   (generated)
   "Normal Distribution Derivation.toc"
-  "Normal Distribution Derivation.auxlock"
   "Normal Distribution Derivation.log"
-  "Normal Distribution Derivation.aux"
+  "Normal Distribution Derivation.auxlock"
   "Normal Distribution Derivation.pdf"
   "Normal Distribution Derivation-figure0.md5"
+  "Normal Distribution Derivation.aux"
   "Normal Distribution Derivation.idx"

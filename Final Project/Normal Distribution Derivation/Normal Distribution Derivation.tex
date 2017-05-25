@@ -26,6 +26,12 @@
 \maketitle
 \tableofcontents
 
+\section{Topics}
+\subsection{Differential Equations}
+This work is going to cover the derivation of the Normal ``pdf'' from a
+differential equation, a useful function in the study of statistics.
+\subsection{Integration Methods}
+To derive such formula, some integration methods are needed.
 \section{Intuition}
 
 First, to derive this incredibly useful formula, we start by the intuition that
@@ -212,5 +218,28 @@ And Finally, the Normal Distribution Curve formula:
   \label{eq:pdf}
   f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left( \frac{x-\mu}{\sigma} \right)^2}
 \end{align}
+
+\section{Career and Real World Application}
+\subsection{Career}
+In statistics this formula is widely used, statisticians use this in many
+calculations and analysis. Nonetheless, it is important to note that this
+calculations are usually performed by the calculator and only require the input
+of the standard deviation $\sigma$ and the median $\mu$.
+\subsection{Real World Application}
+In the real world, this formula is not as extensively used as its integral, the
+``normal cdf''. In the real world, a situation where the ``normal cdf'' becomes
+useful, is when a population is given, and you are asked to approximate the
+probability of having a sample of a proportion that follows an approximately
+normal distribution.
+
+E.g. There is a class with $n$ number of students whose heights follow an
+approximately normal distribution, the mean is $1.6$ meters and the standard
+deviation is $10$cm. What is the probability of choosing a student taller than
+$1.7$ meters?
+
+The solution to this question, is:
+\begin{align*}
+  \int\limits_{1.7}^{\infty}\frac{1}{.1\sqrt{2\pi}}e^{\frac{1}{2}\left( \frac{x-1.6}{.1} \right)^2}dx\approx 0.1587
+\end{align*}
 
 \end{document}
